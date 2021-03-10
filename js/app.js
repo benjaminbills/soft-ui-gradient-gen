@@ -71,7 +71,7 @@ $(document).ready(function () {
   $(document).on("click", "#shadow-outfill", function () {
     $(".square").css(
       "background",
-      `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0.5) 65%)`
+      `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 65%)`
     );
   });
 });
@@ -90,13 +90,14 @@ $(document).ready(function () {
 // })
 
 
-function CopyToClipboard()
+
+function CopyToClipboard(id)
 {
-var r = document.getElementById('code');
-r.querySelectorAll('.css').innerHTML = 
-// r.selectNode(document.querySelectorAll('.css'));
-// window.getSelection().removeAllRanges();
-// window.getSelection().addRange(r);
-document.execCommand('copy');
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy' + "\n");
 window.getSelection().removeAllRanges();
 }
+
