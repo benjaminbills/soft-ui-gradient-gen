@@ -74,20 +74,24 @@ $(document).ready(function () {
       `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 65%)`
     );
   });
+
+  $(document).on("click", "#shadow-infill", function () {
+    $(".square").css(
+      "background",
+      `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 65%)`
+    );
+  });
+
+  $(document).on("click", "#shadow-deep", function () {
+    $(".square").css(
+      "box-shadow",
+      `rgba(145deg, rgba(${shadowColor}))`
+    );
+  });
+
 });
 
-//253px, 506px, 253px, #489dcf, -253px, -253px,506px, #62d5ff
-// linear-gradient(336deg,rgba(0, 0, 255, 0.8),rgba(0, 0, 255, 0) 70.71%);
 
-
-// $(document).ready(function(){
-//   $('.btn-copy').click(function(e){
-//     var text = $(this).parents().text().trim();
-//     var copyText = document.createElement('');
-//     copyText.value = text;
-
-//   })
-// })
 
 
 //copy css function
