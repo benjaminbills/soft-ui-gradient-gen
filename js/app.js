@@ -30,7 +30,7 @@ $(document).ready(function () {
   });
   $(document).on("input", "#radius", function () {
     $(".square").css("border-radius", `${$(this).val()}px`);
-    $("#slider_radius").html($(this).val());
+    $("#slider_radius").html(`${$(this).val()}px`);
     //console.log(`${$(this).val()}px`);
   });
   $(document).on("input", "#shadow", function () {

@@ -50,11 +50,13 @@ button {
 
 .square {
   border-radius: 5px;
-  width: 34px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border: 2px solid none;
   padding: 2px;
   margin: 20px;
   border-radius: 0px;
   background: #55b9f3;
+  box-shadow: 11px 22px rgba(85, 185, 243, 0.55),
+    -11px -11px 22px rgba(85, 185, 243, 0.55);
 }
