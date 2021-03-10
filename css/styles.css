@@ -1,13 +1,13 @@
 body {
-  /* background: linear-gradient(
-    336deg,
-    rgba(0, 0, 255, 0.8),
-    rgba(0, 0, 255, 0) 70.71%
-  ); */
+  /* background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background: url(/compute-ea4c57a4.png);
+  /* backdrop-filter: blur(10px); */
 }
 
 @keyframes gradient {
@@ -30,12 +30,14 @@ body {
   width: 400px;
   margin-left: 55%;
   padding-left: 1rem;
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .container {
-  /* color: white; */
+  color: white;
+  /* color: brown; */
 }
 button {
   background-color: green;
@@ -66,13 +68,9 @@ button {
 }
 
 .shape{
-  background: brown;
-  text-align: center;
-  object-position: center;
-  margin: auto;
-  padding: auto;
-  width: 300px;
+  
 
-  /* background-attachment: fixed; */
-  /* width: 10%; */
 }
+
+
+
