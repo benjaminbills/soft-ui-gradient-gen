@@ -20,6 +20,7 @@ $(document).ready(function () {
     shadowColor = shadowColorArray.toString();
     console.log(shadowColor);
     $(".square").css("background", `rgba(${shadowColor})`);
+    $("#slider_color").html(`rgba(${shadowColor})`);
   });
   $(document).on("input", "#height-width", function () {
     $("#slider_width").html($(this).val());
@@ -36,6 +37,13 @@ $(document).ready(function () {
     let alpha = $(this).val() / 20;
     $(".square").css(
       "box-shadow",
+      `${$(this).val()}px ${
+        $(this).val() * 2
+      }px rgba(${shadowColor},${alpha}), ${$(this).val() * -1}px ${
+        $(this).val() * -1
+      }px ${$(this).val() * 2}px rgba(${shadowColor},${alpha})`
+    );
+    $("#slider_shadow").html(
       `${$(this).val()}px ${
         $(this).val() * 2
       }px rgba(${shadowColor},${alpha}), ${$(this).val() * -1}px ${

@@ -54,17 +54,6 @@
               max="300"
               step="1"
             />
-
-        <div class="box text-center">
-          <h1 class="mt-4">Box</h1><hr>
-          <h2>Shape</h2>
-          <hr>
-          <div id="code">
-            <button>Copy</button>
-            <p> border-radius: <span> 50px;</span></p>
-            <p> background: <span> #901414;</span></p>
-            <p> box-shadow: <span>  20px 20px 60px #7a1111,
-             <br> -20px -20px 60px #a61717;</span></p>
             <label for="shadow" class="form-label">Shadow</label>
             <input
               type="range"
@@ -75,8 +64,16 @@
               max="20"
               step="1"
             />
+          <h2>CSS Output</h2>
+          <hr>
+          <div id="code">
+            <button>Copy</button>
+            <p> border-radius: <span id="slider_radius"> 50px;</span></p>
+            <p> background: <span id="slider_color"> rgb(85, 185, 243);</span></p>
+            <p> box-shadow: <span id="slider_shadow">  11px 22px rgba(85,185,243,0.55), -11px -11px 22px rgba(85,185,243,0.55);</span></p>
+            
 
-          </div>
+          
         </div>
       </div>
     </div>
