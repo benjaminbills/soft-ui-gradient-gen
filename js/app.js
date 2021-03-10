@@ -12,8 +12,14 @@ $(document).ready(function () {
     ];
     return aRgb;
   };
-  let intitalColor = "#55b9f3".substring(1).convertToRGB();
-  let shadowColor = intitalColor.toString();
+  let initialColor = "#55b9f3".substring(1).convertToRGB();
+  let shadowColor = initialColor.toString();
+  let output = [initialColor[0]];
+  for (let i = 1; i < initialColor.length; i++) {
+    output.push(initialColor[i] + 20);
+  }
+  output = output.toString();
+  console.log(output);
 
   $(document).on("input", "#color", function () {
     let shadowColorArray = `${$(this).val()}`.substring(1).convertToRGB();
@@ -59,6 +65,13 @@ $(document).ready(function () {
     //   }px ${$(this).val() * -1}px ${$(this).val() * 2}px #62d5ff`
     // );
   });
+  $(document).on("click", "#shadow-outfill", function () {
+    $(".square").css(
+      "background",
+      `linear-gradient(90deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 70.71%)`
+    );
+  });
 });
 
 //253px, 506px, 253px, #489dcf, -253px, -253px,506px, #62d5ff
+// linear-gradient(336deg,rgba(0, 0, 255, 0.8),rgba(0, 0, 255, 0) 70.71%);
