@@ -32,3 +32,12 @@ body {
 .container{
     /* color: white; */
 }
+button{
+	background-color: green;
+	float: right;
+}
+#code{
+	background-color: black;
+	text-decoration: white;
+	text-align: left;
+}
