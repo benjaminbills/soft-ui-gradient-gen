@@ -6,7 +6,7 @@ body {
   animation: gradient 15s ease infinite;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: url(/compute-ea4c57a4.png);
+  background: url(../compute-ea4c57a4.png);
   /* backdrop-filter: blur(10px); */
 }
 
