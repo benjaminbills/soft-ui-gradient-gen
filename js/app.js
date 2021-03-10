@@ -27,6 +27,9 @@ $(document).ready(function () {
     console.log(shadowColor);
     $(".square").css("background", `rgba(${shadowColor})`);
     $("#slider_color").html(`rgba(${shadowColor})`);
+    $(".square").css("box-shadow", `11px 22px rgba(${shadowColor}), -11px -11px 22px rgba(${shadowColor})`);
+    $('.box').css("box-shadow", `0px 22px 24px rgba(${shadowColor})`);
+    $("#slider_shadow").html(`11px 22px rgba(${shadowColor}), -11px -11px 22px rgba(${shadowColor})`);
   });
   $(document).on("input", "#height-width", function () {
     $("#slider_width").html($(this).val());
@@ -68,10 +71,32 @@ $(document).ready(function () {
   $(document).on("click", "#shadow-outfill", function () {
     $(".square").css(
       "background",
-      `linear-gradient(90deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 70.71%)`
+      `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0.5) 65%)`
     );
   });
 });
 
 //253px, 506px, 253px, #489dcf, -253px, -253px,506px, #62d5ff
 // linear-gradient(336deg,rgba(0, 0, 255, 0.8),rgba(0, 0, 255, 0) 70.71%);
+
+
+// $(document).ready(function(){
+//   $('.btn-copy').click(function(e){
+//     var text = $(this).parents().text().trim();
+//     var copyText = document.createElement('');
+//     copyText.value = text;
+
+//   })
+// })
+
+
+function CopyToClipboard()
+{
+var r = document.getElementById('code');
+r.querySelectorAll('.css').innerHTML = 
+// r.selectNode(document.querySelectorAll('.css'));
+// window.getSelection().removeAllRanges();
+// window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
