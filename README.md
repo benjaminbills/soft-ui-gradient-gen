@@ -5,7 +5,7 @@
 
 ---
 ### Contributors
-[Benjamin Bills](https://github.com/benjaminbills)
+[Benjamin Obafemi](https://github.com/benjaminbills)
 
 [Irene Mukii](https://github.com/Irene-Mukii)
 
