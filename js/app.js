@@ -75,20 +75,6 @@ $(document).ready(function () {
     );
   });
 
-  $(document).on("click", "#shadow-infill", function () {
-    $(".square").css(
-      "background",
-      `linear-gradient(145deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 65%)`
-    );
-  });
-
-  $(document).on("click", "#shadow-deep", function () {
-    $(".square").css(
-      "box-shadow",
-      `rgba(145deg, rgba(${shadowColor}))`
-    );
-  });
-
 });
 
 
