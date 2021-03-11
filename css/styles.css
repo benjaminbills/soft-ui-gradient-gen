@@ -61,19 +61,3 @@ button {
   box-shadow: 11px 11px rgba(85, 185, 243, 0.35),
     -11px -11px 22px rgba(85, 185, 243);
 }
-.test {
-  height: 235px;
-
-  width: 235px;
-
-  border-radius: 6.4rem;
-
-  background: linear-gradient(
-    90deg,
-    rgba(85, 185, 243, 0.8),
-    rgba(85, 235, 293, 0.5) 70.71%
-  );
-
-  box-shadow: 11px 11px 14px rgba(85, 185, 243, 0.55),
-    11px 11px 14px rgba(85, 185, 243, 0.55);
-}
