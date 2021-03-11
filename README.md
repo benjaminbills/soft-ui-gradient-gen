@@ -1,6 +1,7 @@
 # SOFT-UI GRADIENT GENERATOR
 
---- An application that allows users to pick a certain gradient style and color matching then copy the css code and use it in their project!--- 
+--- 
+```An application that allows users to pick a certain gradient style and color matching then copy the css code and use it in their project! ``` 
 
 ---
 ### Contributors
