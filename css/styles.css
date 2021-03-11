@@ -19,12 +19,11 @@ body {
 }
 
 .box {
-  background-size: 300% 100%;
   box-shadow: 0 3px 14px #000;
   border-radius: 1rem;
-  width: 400px;
-  margin-left: 55%;
+  min-width: 400px;
   padding-left: 1rem;
+  padding-right: 1rem;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
