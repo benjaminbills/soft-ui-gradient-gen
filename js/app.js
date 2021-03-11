@@ -12,21 +12,34 @@ $(document).ready(function () {
     ];
     return aRgb;
   };
-  let initialColor = "#55b9f3".substring(1).convertToRGB();
-  let shadowColor = initialColor.toString();
-  let output = [initialColor[0]];
-  for (let i = 1; i < initialColor.length; i++) {
-    output.push(initialColor[i] + 20);
-  }
-  output = output.toString();
-  console.log(output);
+  //loop through color array function
+  let differentiatedColor = function (arrayColor) {
+    let output = [arrayColor[0]];
+    for (let i = 1; i < arrayColor.length; i++) {
+      output.push(arrayColor[i] + 50);
+    }
+    return output.toString();
+  };
+  let shadowColorArray = "#55b9f3".substring(1).convertToRGB();
+
+  let shadowColor = shadowColorArray.toString();
+
+  let gradientColor = differentiatedColor(shadowColorArray);
 
   $(document).on("input", "#color", function () {
-    let shadowColorArray = `${$(this).val()}`.substring(1).convertToRGB();
+    shadowColorArray = `${$(this).val()}`.substring(1).convertToRGB();
+
     shadowColor = shadowColorArray.toString();
-    console.log(shadowColor);
+    console.log(shadowColorArray);
     $(".square").css("background", `rgba(${shadowColor})`);
+    $(".square").css(
+      "box-shadow",
+      `11px 12px rgba(${shadowColor}, 0.4), -11px -11px 22px rgba(${shadowColor})`
+    );
     $("#slider_color").html(`rgba(${shadowColor})`);
+    $("#slider_shadow").html(
+      `11px 12px rgba(${shadowColor}, 0.4), -11px -11px 22px rgba(${shadowColor})`
+    );
   });
   $(document).on("input", "#height-width", function () {
     $("#slider_width").html($(this).val());
@@ -43,7 +56,7 @@ $(document).ready(function () {
     let alpha = $(this).val() / 20;
     $(".square").css(
       "box-shadow",
-      `${$(this).val()}px ${
+      `${$(this).val()}px  ${
         $(this).val() * 2
       }px rgba(${shadowColor},${alpha}), ${$(this).val() * -1}px ${
         $(this).val() * -1
@@ -56,20 +69,22 @@ $(document).ready(function () {
         $(this).val() * -1
       }px ${$(this).val() * 2}px rgba(${shadowColor},${alpha})`
     );
-    //console.log($(this).val());
-
-    //$("#slider_radius").html($(this).val());
-    // console.log(
-    //   `${$(this).val()}px  ${$(this).val()}px ${$(this).val() * 2}px #fff, ${
-    //     $(this).val() * -1
-    //   }px ${$(this).val() * -1}px ${$(this).val() * 2}px #62d5ff`
-    // );
+    console.log($(this).val());
   });
   $(document).on("click", "#shadow-outfill", function () {
+    gradientColor = differentiatedColor(shadowColorArray);
     $(".square").css(
       "background",
-      `linear-gradient(90deg,rgba(${shadowColor}, 0.8),rgba(${output}, 0) 70.71%)`
+      `linear-gradient(90deg,rgba(${shadowColor}, 0.8),rgba(${gradientColor}, 0.5) 70.71%)`
     );
+  });
+  $(document).on("click", "#shadow-infill", function () {
+    gradientColor = differentiatedColor(shadowColorArray);
+    $(".square").css(
+      "background",
+      `linear-gradient(90deg,rgba(${shadowColor}, 0.8),rgba(${gradientColor}, 0.5) 70.71%)`
+    );
+    //To be completed
   });
 });
 
