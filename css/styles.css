@@ -60,3 +60,9 @@ button {
   box-shadow: 11px 11px rgba(85, 185, 243, 0.35),
     -11px -11px 22px rgba(85, 185, 243);
 }
+
+
+#space {
+  width: 40px;
+  height: 40px;
+}
