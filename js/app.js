@@ -173,7 +173,7 @@ $(document).ready(function () {
   });
 });
 
-//copy css function
+//copy css function to clipboard
 function CopyToClipboard(id) {
   var r = document.createRange();
   r.selectNode(document.getElementById(id));
